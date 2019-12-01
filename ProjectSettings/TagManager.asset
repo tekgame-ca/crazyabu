@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bg
+    uniqueID: 2593012725
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tilemap
+    uniqueID: 3244353167
+    locked: 0
+  - name: player
+    uniqueID: 3399991795
+    locked: 0
+  - name: New Layer
+    uniqueID: 3861786583
     locked: 0
