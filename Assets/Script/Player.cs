@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] float m_speed = 1.0f;
+    [SerializeField] float m_jumpPower = 2.0f;
 
-	public float speed;
 	Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -17,19 +18,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, m_jumpPower);
+        }
+        float move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(m_speed * move, rb.velocity.y);
     }
 
-    void FixedUpdate(){
-    	Jump();
-    	float move = Input.GetAxis("Horizontal");
-    	rb.velocity = new Vector2 (speed * move , rb.velocity.y);
-    }
+   
 
-    void Jump(){
-    	if(Input.GetButtonDown("Jump")){
-    		gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f),ForceMode2D.Impulse);
-    	}
-    }
+    // void Jump(){
+    // 	if(Input.GetButtonDown("Jump")){
+    // 		gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f),ForceMode2D.Impulse);
+    // 	}
+    // }
 }	
 
