@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Ground
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -39,18 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: bg
-    uniqueID: 2593012725
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Tilemap
-    uniqueID: 3244353167
+  - name: bg
+    uniqueID: 1338038973
     locked: 0
   - name: player
-    uniqueID: 3399991795
-    locked: 0
-  - name: New Layer
-    uniqueID: 3861786583
+    uniqueID: 983912803
     locked: 0
